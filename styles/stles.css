@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+}
+.loader-container {
+  position: relative;
+}
+
+.loader {
+  border: 4px solid transparent;
+  border-top-color: #8a2be2;
+  border-bottom-color: #8a2be2;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 40px #8a2be2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cyberpunk-button {
+  background: linear-gradient(45deg, #ff0099, #493240);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif; /* A futuristic font */
+  font-size: 20px;
+  padding: 10px 20px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cyberpunk-button:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.cyberpunk-button:hover:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cyberpunk-button:focus {
+  outline: none;
+}
